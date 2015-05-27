@@ -1,3 +1,15 @@
 [submodule "Vim"]
 	path = Vim
 	url = https://github.com/zhiyue/k-vim.git
+[submodule "config/dircolors-solarized"]
+	path = config/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "config/gnome-terminal-colors-solarized"]
+	path = config/gnome-terminal-colors-solarized
+	url = git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "zsh/on-my-zsh"]
+	path = zsh/on-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "config/tmux-config"]
+	path = config/tmux-config
+	url = https://github.com/tony/tmux-config
