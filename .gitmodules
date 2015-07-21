@@ -10,3 +10,6 @@
 [submodule "zsh/on-my-zsh"]
 	path = zsh/on-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "config/tmux-config"]
+	path = config/tmux-config
+	url = https://github.com/zhiyue/tmux-config.git

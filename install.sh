@@ -17,8 +17,13 @@ git submodule update
 git submodule -q foreach git pull -q origin master
 
 
-#设置终端的配色
-echo "Step0: setting up terminal color"
-lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dircolors
-echo "cd $CURRENT_DIR/config/gnome-terminal-colors-solarized && bash -x set_dark.sh "
-cd $HOME && eval 'dircolors .dircolors'
+# dir_colors
+lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
+
+
+
+#Copy tmux config to home:
+lnif $CURRENT_DIR/.tmux.conf $HOME/.tmux.conf
+echo "cd $CURRENT_DIR/vendor/tmux-mem-cpu-load && cmake . && make && make install"
+
+
