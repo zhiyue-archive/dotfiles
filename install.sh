@@ -17,12 +17,12 @@ git submodule update
 git submodule -q foreach git pull -q origin master
 
 
-# dir_colors
+# dir_colors 
 cd $CURRENT_DIR/config/dircolors-solarized/
 lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
-eval `dircolors dir_colors`
+eval `dircolors dircolors.256dark`
 echo "export TERM=xterm-256color">>$HOME/.bashrc
-source $HOME/.bashrc
+#source $HOME/.bashrc
 
 
 # change terminal theme to solarized
@@ -30,6 +30,16 @@ cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
 ./set_dark.sh
 
 
+# set up zsh 
+
+## 1. use oh-my-zsh
+## 2. link .zshrc
+## 3. link theme
+lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
+lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
+lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
+
+#source $HOME/.zshrc
 
 
 #Copy tmux config to home:
