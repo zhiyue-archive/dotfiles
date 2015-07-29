@@ -38,7 +38,7 @@ lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen
 lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
 lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
 lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
-source $HOME/.zshrc
+#source $HOME/.zshrc
 export SHELL=$system_shell 
 
 # change terminal theme to solarized
