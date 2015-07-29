@@ -18,7 +18,17 @@ git submodule -q foreach git pull -q origin master
 
 
 # dir_colors
+cd $CURRENT_DIR/config/dircolors-solarized/
 lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
+eval `dircolors dir_colors`
+echo "export TERM=xterm-256color">>$HOME/.bashrc
+source $HOME/.bashrc
+
+
+# change terminal theme to solarized
+cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
+./set_dark.sh
+
 
 
 
