@@ -49,8 +49,9 @@ cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
 ./set_dark.sh
 
 
+# set up tmux 
 #Copy tmux config to home:
-lnif $CURRENT_DIR/.tmux.conf $HOME/.tmux.conf
-echo "cd $CURRENT_DIR/vendor/tmux-mem-cpu-load && cmake . && make && make install"
+lnif $CURRENT_DIR/config/tmux-config/.tmux.conf $HOME/.tmux.conf
+#lnif $CURRENT_DIR/config/tmux-config $HOME/.tmux
 
 
