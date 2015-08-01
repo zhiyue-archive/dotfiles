@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="zhiyue"
+ZSH_THEME="zhiyue"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -67,12 +67,12 @@ antigen bundle vundle
 antigen bundle sprunge
 antigen bundle fabric
 
-antigen theme  robbyrussell 
+#antigen theme  robbyrussell 
 antigen apply
 
 #plugins=(git ruby autojump osx mvn gradle python pip compleat extract zsh-syntax-highlighting golang)
 
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
