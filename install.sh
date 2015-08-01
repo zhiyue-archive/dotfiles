@@ -34,7 +34,10 @@ lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dircolors
 system_shell=$SHELL
 export SHELL="/bin/zsh"
 #git clone git://github.com/zsh-users/antigen.git ${HOME}/.antigen
-lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen
+if [ ! -d "$HOME/.antigen" ];then
+    mkdir "$HOME/.antigen"
+fi
+lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen/antigen
 lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
 lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
 lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
@@ -46,8 +49,9 @@ cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
 ./set_dark.sh
 
 
+# set up tmux 
 #Copy tmux config to home:
-lnif $CURRENT_DIR/.tmux.conf $HOME/.tmux.conf
-echo "cd $CURRENT_DIR/vendor/tmux-mem-cpu-load && cmake . && make && make install"
+lnif $CURRENT_DIR/config/tmux-config/.tmux.conf $HOME/.tmux.conf
+#lnif $CURRENT_DIR/config/tmux-config $HOME/.tmux
 
 
