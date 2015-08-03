@@ -26,7 +26,7 @@ lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dircolors
 
 
 
-# set up zsh
+echo "1.set up zsh"
 
 ## 1. use oh-my-zsh
 ## 2. link .zshrc
@@ -44,14 +44,17 @@ lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
 #source $HOME/.zshrc
 export SHELL=$system_shell 
 
-# change terminal theme to solarized
+echo "2.change terminal theme to solarized"
 cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
 ./set_dark.sh
 
 
-# set up tmux 
+echo "3.set up tmux "
 #Copy tmux config to home:
 lnif $CURRENT_DIR/config/tmux-config/.tmux.conf $HOME/.tmux.conf
 #lnif $CURRENT_DIR/config/tmux-config $HOME/.tmux
 
-
+echo "4.install and setup Vim"
+lnif $CURRENT_DIR/config/ycm_extra_conf.py $HOME/.ycm_extra_conf.py
+sh -x $CURRNT_DIR/Vim/install.sh
+ 
