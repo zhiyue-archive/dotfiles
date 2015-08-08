@@ -25,6 +25,15 @@ lnif $CURRENT_DIR/config/dircolors-solarized/dircolors.256dark $HOME/.dircolors
 #source $HOME/.bashrc
 
 
+# alias
+ALIASES_DIR="$CURRENT_DIR/zsh/aliases"
+ALIASES_FILES=`ls $ALIASES_DIR/*aliases`
+for f in $ALIASES_FILES
+do
+    F_NAME=`basename $f`
+    ln -s $f ~/"."$F_NAME
+done
+
 
 echo "1.set up zsh"
 
@@ -41,20 +50,22 @@ lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen/antigen
 lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
 lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
 lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
+lnif $CURRENT_DIR/zsh/zsh_aliases $HOME/.zsh_aliases
+lnif $CURRENT_DIR/zsh/zprofile $HOME/.zprofile
 #source $HOME/.zshrc
-export SHELL=$system_shell 
+export SHELL=$system_shell
 
 echo "2.change terminal theme to solarized"
 cd $CURRENT_DIR/config/gnome-terminal-colors-solarized/
-./set_dark.sh
+./install.sh
 
 
 echo "3.set up tmux "
 #Copy tmux config to home:
 lnif $CURRENT_DIR/config/tmux-config/.tmux.conf $HOME/.tmux.conf
+lnif $CURRENT_DIR/config/tmuxinator/ $HOME/.tmuxinator
 #lnif $CURRENT_DIR/config/tmux-config $HOME/.tmux
 
 echo "4.install and setup Vim"
 lnif $CURRENT_DIR/config/ycm_extra_conf.py $HOME/.ycm_extra_conf.py
-sh -x $CURRNT_DIR/Vim/install.sh
- 
+sh -x $CURRENT_DIR/Vim/install.sh
