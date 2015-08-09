@@ -5,8 +5,10 @@
 
 #export WINEPREFIX=$HOME/wine32
 #export WINEARCH=win32
+export RUBY_HOME=$HOME/.rvm/gems/ruby-2.2.0/
 export PAGER="most"
 export PATH=~/bin:~/.local/bin:$PATH
+export PATH=$RUBY_HOME:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre
 #export WORKON_HOME=~/envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
