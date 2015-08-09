@@ -1,6 +1,6 @@
-# ~/.tmuxinator/zhiyue_python.yml
+# ~/.tmuxinator/minecraft.yml
 
-name: zhiyue_python
+name: minecraft
 root: ~/
 
 # Optional tmux socket
@@ -25,14 +25,13 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t zhiyue_python
+# post: tmux -CC attach -t minecraft
 
 windows:
   - editor:
       layout: main-vertical
       panes:
         - vim
-        - Github
-          - cd ~/repos/GitHub/ 
+        - guard
   - server: bundle exec rails s
   - logs: tail -f log/development.log
