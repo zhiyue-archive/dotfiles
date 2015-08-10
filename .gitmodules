@@ -19,3 +19,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts
+[submodule "config/tpm"]
+	path = config/tpm
+	url = https://github.com/tmux-plugins/tpm.git
