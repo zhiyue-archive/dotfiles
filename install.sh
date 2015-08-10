@@ -46,6 +46,7 @@ export SHELL="/bin/zsh"
 if [ ! -d "$HOME/.antigen" ];then
     mkdir "$HOME/.antigen"
 fi
+mkdir -p $HOME/.antigen
 lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen/antigen
 lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
 lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
