@@ -74,3 +74,7 @@ echo "4.install and setup Vim"
 lnif $CURRENT_DIR/config/ycm_extra_conf.py $HOME/.ycm_extra_conf.py
 sh -x $CURRENT_DIR/fonts/install.sh
 sh -x $CURRENT_DIR/Vim/install.sh
+
+echo "5.link config "
+lnif $CURRENT_DIR/config/gitconfig $HOME/.gitconfig
+lnif $CURRENT_DIR/config/gitmessage $HOME/.gitmessage
