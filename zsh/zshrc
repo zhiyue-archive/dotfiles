@@ -152,3 +152,7 @@ alias -s bz2='tar -xjvf'
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+### set up pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"                                                                               │
+eval "$(pyenv init -)"                                                                                             │
+eval "$(pyenv virtualenv-init -)"    
