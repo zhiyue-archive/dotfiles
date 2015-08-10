@@ -65,6 +65,9 @@ echo "3.set up tmux "
 #Copy tmux config to home:
 lnif $CURRENT_DIR/config/tmux-config/.tmux.conf $HOME/.tmux.conf
 lnif $CURRENT_DIR/config/tmuxinator/ $HOME/.tmuxinator
+mkdir -p $HOME/.tmux/plugins
+lnif $CURRENT_DIR/config/tpm $HOME/.tmux/plugins/tpm
+tmux source $HOME/.tmux.conf
 #lnif $CURRENT_DIR/config/tmux-config $HOME/.tmux
 
 echo "4.install and setup Vim"
