@@ -1,0 +1,7 @@
+[user]
+	email = cszhiyue@gmail.com
+	name = zhiyue
+[core]
+	editor = vim
+[commit]
+	template = /home/zhiyue/.gitmessage
