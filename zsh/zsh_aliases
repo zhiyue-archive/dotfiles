@@ -14,6 +14,7 @@ alias update-submodules="git submodule foreach 'git checkout master && git pull 
 alias glog="git log --graph --oneline --decorate --date-order --color --boundary"
 alias lh='ls -l .??*'
 alias lhd='ls -ld .??*'
+alias tmux='tmux -2'
 
 man() {
     env \
