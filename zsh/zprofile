@@ -1,6 +1,5 @@
 #_byobu_sourced=1 . /usr/bin/byobu-launch
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 #[[ -e /usr/local/texlive/2012/bin ]] && PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
 
 #export WINEPREFIX=$HOME/wine32
@@ -14,3 +13,9 @@ export PATH=$RUBY_HOME:$PATH
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 #export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export EDITOR='vim'
+export JAVA_HOME=/usr/lib/jvm/java-8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+
