@@ -53,6 +53,7 @@ lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
 lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
 lnif $CURRENT_DIR/zsh/zsh_aliases $HOME/.zsh_aliases
 lnif $CURRENT_DIR/zsh/zprofile $HOME/.zprofile
+lnif $CURRENT_DIR/zsh/zlogin $HOME/.zlogin
 #source $HOME/.zshrc
 export SHELL=$system_shell
 
