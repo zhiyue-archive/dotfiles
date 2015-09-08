@@ -1,0 +1,42 @@
+export PATH="$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:$HOME/bin:/usr/local/sbin:/usr/sbin"
+export PATH=~/bin:~/.local/bin:$PATH
+
+
+# pager
+export PAGER="most"
+
+# Editor
+export EDITOR='vim'
+export VISUAL="$EDITOR"
+
+# Java setting
+export JAVA_HOME=/usr/lib/jvm/java-8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+# ruby
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export RUBY_HOME=$HOME/.rvm/gems/ruby-2.2.0/
+export PATH=$RUBY_HOME:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+### set up pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+if [ -n "$TMUX" ]; then
+    export TERM="screen-256color"
+elif ! `tty|grep -q "tty"`; then
+    export TERM="xterm-256color"
+else
+    export TERM="linux"
+fi
+#export WINEPREFIX=$HOME/wine32
+#export WINEARCH=win32
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+#export JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre
+#export WORKON_HOME=~/envs
+#[[ -e /usr/local/texlive/2012/bin ]] && PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH

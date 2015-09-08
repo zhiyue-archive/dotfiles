@@ -50,8 +50,9 @@ mkdir -p $HOME/.antigen
 lnif $CURRENT_DIR/zsh/antigen $HOME/.antigen/antigen
 lnif $CURRENT_DIR/zsh/oh-my-zsh $HOME/.oh-my-zsh
 lnif $CURRENT_DIR/zsh/zshrc $HOME/.zshrc
-lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
+##lnif $CURRENT_DIR/zsh/zhiyue.zsh-theme $HOME/.oh-my-zsh/themes/zhiyue.zsh-theme
 lnif $CURRENT_DIR/zsh/zsh_aliases $HOME/.zsh_aliases
+lnif $CURRENT_DIR/zsh/zshenv $HOME/.zshenv
 lnif $CURRENT_DIR/zsh/zprofile $HOME/.zprofile
 lnif $CURRENT_DIR/zsh/zlogin $HOME/.zlogin
 #source $HOME/.zshrc
